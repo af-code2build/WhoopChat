@@ -91,7 +91,7 @@ profilePicture.classList.add("profile_picture");
 profilePictureLabel.classList.add("profile_name");
 
 //Add Content
-profilePicture.src = "../resources/kitty.webp";
+profilePicture.src = "resources/kitty.webp";
 profilePicture.alt = "Lewis Profile Image"
 profilePictureLabel.innerText = "Lewis Carroll"
 
