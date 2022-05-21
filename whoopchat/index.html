@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Intro</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="../styles/reset.css"> </link>
+        <link rel="stylesheet" href="../styles/base.css"> </link>
+        <link rel="stylesheet" href="../styles/index.css"> </link>
+
+    </head>
+    <body>
+            <nav>  
+                <div class="logo_container"><img class="logo_image" src="../resources/logo.png" alt="Profile Image"></div> 
+                
+                <div class="profile">
+                    <div><img class="profile_picture" src="../resources/profile2.webp" alt="Profile Image"></div>
+                    <label class="profile_name">Freya Miller</label>
+                </div>
+
+                <div class="menu">
+                    <label id="contact_list" class="menu_options">Contact List</label>
+                    <label id="new_group_option" class="menu_options">New Group</label>
+                    <label id="new_contact_option" class="menu_options">New Contact</label>
+                    <label id="achived_option" class="menu_options">Achived</label>
+                    <label id="settings_option" class="menu_options">Settings</label>
+                    <label id="logout_option" class="menu_options">Log Out</label>
+                </div>
+
+                <div id="hamburger_menu">
+                    <span class="bar"></span>    
+                    <span class="bar"></span>    
+                    <span class="bar"></span>    
+                </biv>
+    
+            </nav>
+            <div id="body_panel">
+
+                <div id="contacts_panel">
+
+                    <div class="slider_panel slider_panel_from_left">
+                        <header class="slider_header">
+                            <h1 class="slider_panel_title">Title</h1>
+                            <a href="#0" class="slider_close_button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x-lg icon_color" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                                  </svg>
+                            </a>
+                         </header>
+        
+                        <div class="slider_container">
+                            <div class="slider_content">
+                                <input type="text" id="slider_content_contactName" class="form_inputs" placeholder="Search for a name">
+                                <button class="clean_buttons">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle icon_form" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                         </div> 
+                    </div>
+
+                    <div id="search_panel">
+                        <form class="search_tool">
+                            <input type="search" id="input_search">
+                            <button type="submit" class="search_button">
+                                <span class="icon_search">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search icon_color" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+    
+                    <div class="contact">
+                        <div class="profile_picture_background"><img class="profile_picture" src="../resources/doggy.jpeg" alt="Vanessa Profile Image"></div>
+                        <label class="profile_name">Vanessa Garcia</label>
+                    </div>
+                    <div class="contact">
+                        <div class="profile_picture_background"><img class="profile_picture" src="../resources/profile3.jpeg" alt="Ruth Profile Image"></div>
+                        <label class="profile_name">Ruth Lawrence</label>
+                    </div>
+                    <div class="contact">
+                        <div class="profile_picture_background"><img class="profile_picture" src="../resources/profile4.jpeg" alt="Michael Profile Image"></div>
+                        <label class="profile_name">Michael Joen</label>
+                    </div>      
+                </div>
+    
+                <div id="chat_panel">   
+                    <div id="sub_chat_panel">
+                        <div class="message_block_send">
+                            <div class="dialog_bubble_send">   
+                                <div class="dialog_box_send">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis fuga veritatis. Possimus facilis fuga recusandae, blanditiis eum sed, vel sunt sint dolorem nobis quo labore quibusdam accusamus dolore eveniet. 
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+                        <div class="message_block_response">
+                            <div class="dialog_bubble_received">   
+                                <div class="dialog_box_received">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis fuga veritatis. Possimus facilis fuga recusandae, blanditiis eum sed, vel sunt sint dolorem nobis quo labore quibusdam accusamus dolore eveniet. 
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis fuga veritatis. Possimus facilis fuga recusandae, blanditiis eum sed, vel sunt sint dolorem nobis quo labore quibusdam accusamus dolore eveniet. 
+                                    <img class="dialog_image" src="../resources/hugPile.webp" alt="Friendly animals">
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+                        <div class="message_block_send">
+                            <div class="dialog_bubble_send">   
+                                <div class="dialog_box_send">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+                        <div class="message_block_response">
+                            <div class="dialog_bubble_received">   
+                                <div class="dialog_box_received">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis fuga veritatis. Possimus facilis fuga recusandae, blanditiis eum sed, vel sunt sint dolorem nobis quo labore quibusdam accusamus dolore eveniet. 
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, itaque velit ab, numquam explicabo hic necessitatibus eum ipsam, perferendis cum natus at? Architecto, corporis fugiat nostrum voluptate obcaecati voluptatem minus!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorum quos, quisquam molestiae incidunt ipsa atque corrupti animi libero natus illum laboriosam hic repellat itaque asperiores doloribus est totam placeat.
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+                        <div class="message_block_send">
+                            <div class="dialog_bubble_send">   
+                                <div class="dialog_box_send">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis fuga veritatis. Possimus facilis fuga recusandae, blanditiis eum sed, vel sunt sint dolorem nobis quo labore quibusdam accusamus dolore eveniet. 
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor ratione quas exercitationem illum aliquid nemo, ipsum itaque ullam labore suscipit. Assumenda perspiciatis accusantium, labore repellat pariatur voluptas debitis ratione sed.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, voluptatibus! Excepturi distinctio omnis ratione dignissimos, consequuntur eveniet, quasi dicta adipisci accusamus alias harum provident assumenda eaque. Eligendi aut officiis repellendus?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae rem mollitia hic quis minus, eaque facilis dolorum tempore quos nulla rerum deleniti ducimus quae fugit omnis quam id corporis asperiores!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur rem commodi hic, beatae velit quis maiores impedit dicta necessitatibus ullam in officia, deserunt debitis animi! Atque consequuntur hic sapiente.
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+                        <div class="message_block_send">
+                            <div class="dialog_bubble_send">   
+                                <div class="dialog_box_send">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere maxime repellendus minus! Atque impedit ab voluptatibus saepe cum dolore labore, dolorum iure distinctio delectus voluptatum perferendis alias quas expedita est. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, est adipisci ratione cupiditate doloribus consectetur provident explicabo voluptates totam hic voluptatum corporis optio earum soluta quidem excepturi maiores ipsa obcaecati.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a sequi animi nemo, quasi laborum voluptate placeat aut deleniti enim corrupti ipsum culpa unde doloribus impedit quidem velit suscipit rerum.
+                                </div>
+                                <span class="dialog_box_send_add_on"></span>
+                            </div>
+                        </div>
+        
+        
+                        <div id="adding_message_panel">
+                            <form class="message_editor">
+                                <textarea id="add_text_message" cols="4" rows="5"></textarea>
+                                <button type="submit" class="send_message_button">
+                                    <span class="icon_send_message ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill icon_color" viewBox="0 0 16 16">
+                                    <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/></svg>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="../scripts/index.js"></script>
+    </body>
+</html>
+

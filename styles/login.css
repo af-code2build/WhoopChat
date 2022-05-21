@@ -1,0 +1,142 @@
+
+body{
+    background-color: #111B21;
+
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex; 
+
+    overflow: auto;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.signup_panel{
+    background-color: #2a3942;
+    border-radius: 15px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: -webkit-flex; 
+    display: flex; 
+
+    flex-direction: column;
+
+    padding-bottom: 50px;
+}
+
+.logo{
+    padding-top: 20px;
+    align-self: center;
+    text-align: center;
+    line-height: 35px;
+}
+
+input{
+    background: none;
+    outline: none;
+    border-style: solid;
+    border-width: 0px 0px 1px;
+    padding-bottom: 5px;
+
+    margin: 2em 3em 0px;
+    font-size: 120%;
+
+    transition: all 100ms ease-in-out;
+
+    flex-grow: 1;
+
+    color: #55e3ff;
+    
+}
+
+input:hover{
+    color: #55e3ff;
+    border-color: #55e3ff;
+    box-shadow: 0 0.5em 0.5em -0.4em #55e3ff;
+}
+
+input:focus{
+    color: #55e3ff; 
+    border-color: #55e3ff;
+}
+
+
+
+#signup_logo{
+    shape-outside: (50%);
+    height: 100%;
+    width: 100%;
+
+    flex-grow: 4;
+    align-self: center;
+}
+
+button{
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+#login{
+    margin-top: 15px;
+    height: 3em;
+
+    font-size: 100%;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 200ms ease-in-out;
+
+    flex-grow: 1;
+
+    margin: 4em 3em 0px;
+}
+
+#login:hover{
+    background: -webkit-linear-gradient(#55e3ff, #eee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border-color: #55e3ff;
+    box-shadow: 0 0.5em 0.5em -0.4em #55e3ff;
+    transform: translateY(-0.25em);
+}
+
+#register{
+    height: 3em;
+
+    font-size: 100%;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: all 200ms ease-in-out;
+
+    flex-grow: 1;
+    margin: 2em 3em 0px;
+}
+
+#register:hover{
+    background: -webkit-linear-gradient(#55e3ff, #eee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    border-color: #55e3ff;
+    box-shadow: 0 0.5em 0.5em -0.4em #55e3ff;
+    transform: translateY(-0.25em);
+}

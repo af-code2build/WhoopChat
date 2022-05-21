@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box; /* Making sure the border is included when we define the Width and Height properties values */
+    font-family: 'Nunito', sans-serif;
+}
+
+.logo{
+    color:  rgb(143, 143, 143);
+    font-family: monospace;
+    text-align:left;
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 10px;
+    min-width: 200px
+}
+
+.clean_buttons{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;  
+ }
+
+ .show_element{
+     display: inherit !important;
+ }
+
+ .hidden_element{
+    display: none !important;
+}
+
+
+
+
+
+
+
