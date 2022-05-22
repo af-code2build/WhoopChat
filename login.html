@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="styles/reset.css"> </link>
     <link rel="stylesheet" href="styles/base.css"> </link>
     <link rel="stylesheet" href="styles/login.css"> </link>
-    <title>Log In</title>
+    <title>WhoopChat</title>
 </head>
 <body>
-    <div class="signup_panel">   
+    <form id="signup_panel">   
         <img id="signup_logo" src="resources/logo_login.png" alt="App Intro Logo">
-        <input type="text" placeholder="Enter your username" />
-        <input type="password" placeholder="Enter your password"/>
+        <input id="loging_email" type="text" placeholder="Enter your e-mail" />
+        <input id="loging_password" type="password" placeholder="Enter your password"/>
     
         <button id="login">Login</button>
         <button id="register">Register</button>
-    </div>
+    </form>
+    <script src="scripts/login.js"></script>
 </body>
 </html>

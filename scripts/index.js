@@ -1,3 +1,5 @@
+// Global variables
+let lastContactClicked = document.querySelector('#contacts');
 
 // All DOM elements
 const nav_newGroup = document.querySelector('#new_group_option');
@@ -7,7 +9,9 @@ const nav_contactsList = document.querySelector('#contact_list');
 const humburger_button = document.querySelector('#hamburger_menu');
 const nav_menu = document.querySelector('.menu');
 const contacts_panel = document.querySelector('#contacts_panel');
+const contacts_section = document.querySelector('#contacts');
 const chat_panel = document.querySelector('#chat_panel');
+
 
 //EVENTS - MENU BUTTONS ACTIONS
 const show_slidePanel = function(title) {
@@ -36,6 +40,7 @@ nav_contactsList.addEventListener("click", function() {
     nav_menu.classList.toggle("active");  
 
 });
+
 
 // Show both contact and chat panels after the window is a certain size
 window.onresize = function(){
@@ -78,28 +83,69 @@ function scrollToBottom(element) {
 scrollToBottom(document.querySelector("#chat_panel"));
 
 
-//Create a new contact
-const newContact = document.createElement("div");
-const profilePictureContainer = document.createElement("div");
-const profilePicture = document.createElement("img");
-const profilePictureLabel = document.createElement("label");
+function AddNewContact(profileName, profileImagePath, description){
+    //Creating a new DOM elements
+    const newContact = document.createElement("div");
+    const profilePictureContainer = document.createElement("div");
+    const profilePicture = document.createElement("img");
+    const profilePictureLabel = document.createElement("label");
 
-//Add styles
-newContact.classList.add("contact");
-profilePictureContainer.classList.add("profile_picture_background");
-profilePicture.classList.add("profile_picture");
-profilePictureLabel.classList.add("profile_name");
+    //Adding styles
+    newContact.classList.add("contact");
+    profilePictureContainer.classList.add("profile_picture_background");
+    profilePicture.classList.add("profile_picture");
+    profilePictureLabel.classList.add("profile_name");
 
-//Add Content
-profilePicture.src = "resources/kitty.webp";
-profilePicture.alt = "Lewis Profile Image"
-profilePictureLabel.innerText = "Lewis Carroll"
+    //Adding Content
+    profilePicture.src = profileImagePath;
+    profilePicture.alt = description
+    profilePictureLabel.innerText = profileName
 
-//Stack html elements
-newContact.append(profilePictureContainer, profilePictureLabel);
-profilePictureContainer.appendChild(profilePicture);
+    //Stack html elements
+    newContact.append(profilePictureContainer, profilePictureLabel);
+    profilePictureContainer.appendChild(profilePicture);
+    contacts_section.appendChild(newContact);
+}  
 
-contacts_panel.appendChild(newContact);
+AddNewContact("Lewis Carroll", "resources/kitty.webp", "Contact Profile Image");
+
+contacts_section.addEventListener("click", function(e) {
+
+    if (e.target.nodeName === "DIV"){
+        lastContactClicked.style.backgroundColor = "#111B21";
+        lastContactClicked = e.target;
+        e.target.style.backgroundColor = "#2A3942";
+    }  
+
+    if (e.target.nodeName === "LABEL"){
+        lastContactClicked.style.backgroundColor = "#111B21";
+        lastContactClicked = e.target.parentNode;
+        e.target.parentNode.style.backgroundColor = "#2A3942";
+    } 
+
+    if (e.target.nodeName === "IMG"){
+        lastContactClicked.style.backgroundColor = "#111B21";
+        lastContactClicked = e.target.parentNode.parentNode;
+        e.target.parentNode.parentNode.style.backgroundColor = "#2A3942";
+    } 
+
+});
+
+// Resolve problem with body overflow after refresh (puting the scroll on top before setting the overflow hidden property)
+window.onbeforeunload = function () {
+    scrollToTop(document.querySelector("#chat_panel"));
+  }
+
+function scrollToTop(element) {
+    element.scroll({ top: 0 });
+}
+
+
+
+
+
+
+
 
 
 

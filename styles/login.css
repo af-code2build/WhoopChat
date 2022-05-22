@@ -17,7 +17,7 @@ body{
 }
 
 
-.signup_panel{
+#signup_panel{
     background-color: #2a3942;
     border-radius: 15px;
     padding: 15px 25px;
