@@ -11,6 +11,9 @@ const nav_menu = document.querySelector('.menu');
 const contacts_panel = document.querySelector('#contacts_panel');
 const contacts_section = document.querySelector('#contacts');
 const chat_panel = document.querySelector('#chat_panel');
+const selected_profileImg = document.querySelector('#selected_profile_image');
+const selected_profileName = document.querySelector('#selected_profile_name');
+
 
 
 //EVENTS - MENU BUTTONS ACTIONS
@@ -51,7 +54,15 @@ window.onresize = function(){
         const chat_panel = document.querySelector('#chat_panel');
         contacts_panel.classList.remove("show_element");
         chat_panel.classList.remove("hidden_element");
+        selected_profileImg.src = "resources/profile2.webp";
+        selected_profileName.textContent = "Freya Miller";
+    }
 
+    if(window.innerWidth < 1040 && lastContactClicked){
+        let profileImage = lastContactClicked.querySelector("img");
+        let profileName = lastContactClicked.querySelector("label");
+        selected_profileImg.src = profileImage.src;
+        selected_profileName.textContent = profileName.textContent;
     }
 };
 
@@ -109,6 +120,7 @@ function AddNewContact(profileName, profileImagePath, description){
 
 AddNewContact("Lewis Carroll", "resources/kitty.webp", "Contact Profile Image");
 
+//Select one of the contacts and change the profile image if the screen is a certain size
 contacts_section.addEventListener("click", function(e) {
 
     if (e.target.nodeName === "DIV"){
@@ -128,6 +140,15 @@ contacts_section.addEventListener("click", function(e) {
         lastContactClicked = e.target.parentNode.parentNode;
         e.target.parentNode.parentNode.style.backgroundColor = "#2A3942";
     } 
+
+    if (window.innerWidth < 1040){
+        contacts_panel.classList.toggle("show_element");
+        chat_panel.classList.toggle("hidden_element");
+        let profileImage = lastContactClicked.querySelector("img");
+        let profileName = lastContactClicked.querySelector("label");
+        selected_profileImg.src = profileImage.src;
+        selected_profileName.textContent = profileName.textContent;
+    }
 
 });
 
